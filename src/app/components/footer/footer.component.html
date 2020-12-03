@@ -1,0 +1,46 @@
+<footer class="footer">
+<div class="content-footer">
+    <div class="content1">
+        <p class="text-footer">El Salvador, San Salvador</p>
+        <h3 class="text-footer">Nos puedes encontrar en nuestras redes sociales: </h3>
+        
+        <div class="div-img-1">
+            <img src="../../../assets/img/facebook-logo-2019.svg">
+        </div>
+        <div class="div-img-1">
+            <img src="../../../assets/img/twitter.svg">
+        </div>
+        <div class="div-img-1">
+            <img src="../../../assets/img/instagram.svg">
+        </div>
+       
+    </div>
+   <div class="wave">
+   
+   
+    </div
+
+    <div class="content2">
+    
+        <h2>Ponte en contacto</h2>
+        <form (ngSubmit)="contacto(formContacto)" #formContacto="ngForm" class="form-contact">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" [(ngModel)]="contact.nombre">
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" [(ngModel)]="contact.apellido">
+
+            <label for="email">Email:</label>
+            <input type="text" name="email" [(ngModel)]="contact.email">
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" name="telefono" [(ngModel)]="contact.telefono">
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" [(ngModel)]="contact.mensaje"></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</div>
+</footer>

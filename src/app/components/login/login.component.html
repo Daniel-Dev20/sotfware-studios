@@ -1,0 +1,64 @@
+
+
+<body class="body-form">
+  
+    <div class="flex">
+        <app-menu></app-menu>
+        <div class="cont-form">
+            <h2 >Iniciar Sesión</h2>
+            <form (ngSubmit)="login(formLogin)" #formLogin="ngForm" class="formulario">
+                
+                    <label for="email">Email:</label>
+               
+                    <input type="email" name="email" [(ngModel)]="usuarioLogin.email" required>
+               
+                
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" [(ngModel)]="usuarioLogin.password" required>
+              
+                <input type="submit" value="Iniciar Sesión">
+
+
+            </form>
+
+        </div>
+        <div class="register">
+            <h2 >Registrarse</h2>
+            <form (ngSubmit)="register(formRegister)" #formRegister="ngForm" class="registerForm">
+                
+               <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" [(ngModel)]="usuario.nombre" required class="registroInput">
+
+                <label for="Apellido">Apellido:</label>
+                <input type="text" name="apellido" [(ngModel)]="usuario.apellido" required class="registroInput">
+
+                <label for="Role">Role:</label>
+                <input type="text" name="role" [(ngModel)]="usuario.role" required class="registroInput">
+
+                <label for="contrato">Contrato:</label>
+                <input type="text" name="contrato" [(ngModel)]="usuario.contrato" required class="registroInput">
+
+                <label for="turnoLaboral">Turno Laboral:</label>
+                <input type="text" name="turnoLaboral" [(ngModel)]="usuario.turnoLaboral" required class="registroInput">
+
+                <label for="telefono">Teléfono</label>
+                <input type="text" name="telefono" [(ngModel)]="usuario.telefono" required class="registroInput">
+
+                <label for="salario">Salario:</label>
+                <input type="text" name="salario" [(ngModel)]="usuario.salario" required class="registroInput">
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" [(ngModel)]="usuario.email" required class="registroInput">
+           
+            
+                <label for="password">Password:</label>
+                <input type="password" name="password" [(ngModel)]="usuario.password" required class="registroInput">
+          
+            <input type="submit" value="Registrarse" class="submit">
+
+
+        </form>
+        </div>
+    </div>
+
+</body>

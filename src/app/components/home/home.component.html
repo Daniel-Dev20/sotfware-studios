@@ -1,0 +1,136 @@
+<header class="headerInicio" id="inicio">
+    <app-menu></app-menu>
+    <div class="contenedorImg ">
+
+        <h1 class="titulo">SOFTWARE STUDIOS</h1>
+
+        <p class="titulo">Desarrollamos aplicaciones web y movil con pasión y profesionalismo!</p>
+    </div>
+    <div class="servicios">
+        <div class="cards">
+            <img src="../../../assets/img/code.svg">
+            <h3>Desarrollo web</h3>
+            <p>Desarrollamos paginas web modernas para tu negocio.</p>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Angular</li>
+                <li>NodeJS</li>
+                <li>MongoDB</li>
+            </ul>
+            <button type="submit" class="btn-postularse"><a>Postularse</a></button>
+        </div>
+        <div class="cards">
+            <img src="../../../assets/img/mobile.svg">
+            <h3>Desarrollo Móvil</h3>
+            <p>Desarrollamos app movil multiplataformas para tu negocio.</p>
+            <ul>
+                <li>Ionic</li>
+                <li>Typescript</li>
+                <li>CSS</li>
+                <li>NodeJS</li>
+                <li>MongoDB</li>
+            </ul>
+            <button type="submit" class="btn-postularseMovil"><a>Postularse</a></button>
+        </div>
+        <div class="cards">
+            <img src="../../../assets/img/programming.svg">
+            <h3>Entrenamientos</h3>
+            <p>Ofrecemos entranamientos para desarrolladores sin experiencia laboral trabajando con nuestras
+                tecnologias.</p>
+            <ul>
+                <li>Desarrollo web</li>
+                <li>Desarrollo móvil</li>
+            </ul>
+            <button type="submit" class="btn-postularseEntre"><a>Postularse</a></button>
+        </div>
+    </div>
+</header>
+<main class="contenedor">
+
+    <div class="info">
+        <h2>ACERCA DE NOSOTROS</h2>
+        <p>Somos una empresa que se dedica al desarrollo de sotware con experiencias de 5 años en el rubro de sitios
+            web,
+            aplicaciones web moviles,
+            aplicaciones para movil multiplataformas, hemos trabajado para diversas empresas tanto nacionales como
+            internacionales, devido a la circunstancias por las que pasamos mundialmente estabamos trabajando de manera
+            remota con nuestros empleados desarrollando y entregando un producto de buena calidas que es lo que siempre
+            nos ha caracterizado </p>
+    </div>
+    <div class="imagen-contenedor">
+        <img src="../../../assets/img/about.svg">
+    </div>
+
+</main>
+
+<section class="tecnologias">
+
+
+    <div class="tecnologias-cards">
+        <div class="container-img">
+            <img src="../../../assets/img/angular.svg">
+        </div>
+
+        <h4>Angular</h4>
+    </div>
+    <div class="tecnologias-cards">
+        <div class="container-img">
+            <img src="../../../assets/img/ionic.svg">
+        </div>
+
+        <h4>Ionic</h4>
+    </div>
+
+    <div class="tecnologias-cards">
+        <div class="container-node">
+            <img src="../../../assets/img/nodejs.svg">
+        </div>
+
+        <h4>Nodejs</h4>
+    </div>
+
+    <div class="tecnologias-cards">
+        <div class="container-mongo">
+            <img src="../../../assets/img/mongodb.svg">
+        </div>
+
+        <h4>MongoDB</h4>
+    </div>
+</section>
+<div class="postularse">
+    <h3>Postularse</h3>
+    <form class="formPostularse" (ngSubmit)="postulados(postuladosForm)" #postuladosForm="ngForm">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" [(ngModel)]="postulado.nombre">
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" [(ngModel)]="postulado.apellido">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" [(ngModel)]="postulado.email">
+
+        <label for="telefono">Teléfono</label>
+        <input type="text" name="telefono" [(ngModel)]="postulado.telefono">
+
+        <label for="nivelExperiencia">Nivel de Experiencia:</label>
+        <select class="options" name="experiencia"[(ngModel)]="postulado.nivelExperiencia">
+            <option>Sin Experiencia</option>
+            <option>Junior</option>
+            <option>Senior</option>
+        </select>
+
+        <label for="nivelExperiencia">Puesto:</label>
+        <select class="options"  name="resumen"[(ngModel)]="postulado.resumen">
+            <option>Desarrollo web</option>
+            <option>App Móviles</option>
+            <option>Entrenamiento</option>
+        </select>
+
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+<footer>
+    <app-footer></app-footer>
+</footer>
